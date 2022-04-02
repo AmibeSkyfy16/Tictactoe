@@ -1,0 +1,68 @@
+plugins {
+    id 'java-library' // to do this  api 'io.github.typhon0:AnimateFX:1.2.2-SNAPSHOT'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.12'
+}
+
+repositories {
+    mavenCentral()
+    maven { url 'https://oss.jfrog.org/artifactory/oss-snapshot-local' }
+    maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
+}
+
+dependencies {
+    implementation 'org.xerial:sqlite-jdbc:3.36.0.3'
+    api 'io.github.typhon0:AnimateFX:1.2.2-SNAPSHOT'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter-params:5.8.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+application {
+    mainClassName = "ch.skyfy.tictactoe.TicTacToeLauncher"
+}
+
+javafx {
+    version = "17.0.2"
+    modules = ['javafx.controls', 'javafx.fxml', 'javafx.media']
+}
+
+test {
+    useJUnitPlatform()
+}
+
+run {
+//    doFirst {
+//        jvmArgs += ['--add-exports', 'javafx.controls/com.sun.javafx.scene.control.behavior=ch.skyfy.tictactoe',
+//                    '--add-exports', 'javafx.controls/com.sun.javafx.scene.control.inputmap=ch.skyfy.tictactoe'
+//        ]
+//    }
+}
+
+compileJava {
+    doFirst {
+//        options.compilerArgs += [
+//                '--add-exports', 'javafx.controls/com.sun.javafx.scene.control.behavior=ch.skyfy.tictactoe',
+//                '--add-exports', 'javafx.controls/com.sun.javafx.scene.control.inputmap=ch.skyfy.tictactoe'
+//        ]
+        options.encoding = "UTF-8"
+    }
+}
+
+jar {
+    //noinspection GroovyAssignabilityCheck
+    manifest {
+        attributes 'Main-Class': 'ch.skyfy.appautomaticinstaller.AppAutomaticInstallerLauncher'
+    }
+    archivesBaseName = "${rootProject.name}"
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+    duplicatesStrategy = DuplicatesStrategy.INCLUDE // i dont know what's this -> without this we cant use installDist task
+}

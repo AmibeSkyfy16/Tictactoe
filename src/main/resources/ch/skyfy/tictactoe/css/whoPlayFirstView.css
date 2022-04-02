@@ -1,0 +1,22 @@
+.button{
+    -fx-background-insets: 0;
+    -fx-background-radius: 10;
+    -fx-padding: 0;
+    -fx-text-fill: #17191C;
+}
+
+.play-btn{
+    -fx-background-color: #E3B505;
+}
+
+#root{
+    -fx-background-color: #F3C677;
+}
+
+#title-lbl{
+    -fx-text-fill: #873286;
+}
+
+#cancel-btn{
+    -fx-background-color: #F36A63;
+}

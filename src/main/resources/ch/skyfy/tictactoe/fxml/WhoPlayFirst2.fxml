@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+
+<fx:root id="root" prefHeight="400.0" prefWidth="600.0" stylesheets="@../css/whoPlayFirstView.css" type="StackPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <GridPane fx:id="root_gridPane">
+            <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints fx:id="top_rowContraints" minHeight="10.0" percentHeight="20.0" prefHeight="30.0" valignment="BOTTOM" vgrow="SOMETIMES" />
+                <RowConstraints fx:id="center_rowConstraints" minHeight="10.0" percentHeight="60.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints fx:id="bottom_rowContraints" minHeight="10.0" percentHeight="20.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <HBox fx:id="center_hbox" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0" GridPane.rowIndex="1" />
+            <StackPane fx:id="top_stackPane" prefHeight="150.0" prefWidth="200.0" />
+            <StackPane fx:id="bottom_stackPane" prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="2" />
+            </children>
+        </GridPane>
+    </children>
+</fx:root>

@@ -1,0 +1,42 @@
+#singleplayer{
+    -fx-background-color: #f94144;
+}
+/*#singleplayer:hover{*/
+/*    -fx-background-color: #f36159;*/
+/*}*/
+#singleplayer:pressed{
+    -fx-background-color: #FF7400;
+}
+
+
+#multiplayer-local{
+    -fx-background-color: #f8961e;
+}
+/*#multiplayer-local:hover{*/
+/*    -fx-background-color: #f37f58;*/
+/*}*/
+#multiplayer-local:pressed{
+    -fx-background-color: #FFAE00;
+}
+
+#multiplayer-online{
+    -fx-background-color: #43aa8b;
+}
+/*#multiplayer-online:hover{*/
+/*    -fx-background-color: #f6a855;*/
+/*}*/
+#multiplayer-online:pressed{
+    -fx-background-color: #7bdff2;
+}
+
+#leave{
+    -fx-background-color: #edddd4;
+}
+
+#options{
+    -fx-background-color: #edddd4;
+}
+
+/*#root{*/
+/*    -fx-background-color: #F0F2CD;*/
+/*}*/

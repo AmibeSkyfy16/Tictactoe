@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<fx:root id="root" prefHeight="400.0" prefWidth="600.0" stylesheets="@../css/whoPlayFirstView.css" type="StackPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <GridPane fx:id="root_gridPane">
+            <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints fx:id="top_rowContraints" minHeight="10.0" percentHeight="20.0" prefHeight="30.0" valignment="BOTTOM" vgrow="SOMETIMES" />
+                <RowConstraints fx:id="center_rowConstraints" minHeight="10.0" percentHeight="60.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints fx:id="bottom_rowContraints" minHeight="10.0" percentHeight="20.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+            <StackPane fx:id="top_stackPane" prefHeight="150.0" prefWidth="200.0">
+               <children>
+                      <Label id="title-lbl" fx:id="title_lbl" text="Choisissez qui joue en premier !" textFill="#29d7cb">
+                          <font>
+                              <Font size="28.0" />
+                          </font>
+                      </Label>
+               </children>
+            </StackPane>
+                <HBox fx:id="bottom_hbox" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0" GridPane.rowIndex="1">
+                    <children>
+                        <Button fx:id="playFirst_btn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="250.0" styleClass="play-btn" text="Je joue en premier" textAlignment="CENTER" textFill="#f55267" wrapText="true">
+                            <font>
+                                <Font name="Arial Bold" size="18.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="playSecond_btn" layoutX="138.0" layoutY="139.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="250.0" styleClass="play-btn" text="Je joue en deuxième" textAlignment="CENTER" textFill="#f55267" wrapText="true">
+                            <font>
+                                <Font name="Arial Bold" size="18.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </HBox>
+                <Button id="cancel-btn" fx:id="cancel_btn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="200.0" text="Cancel" GridPane.rowIndex="2" />
+            </children>
+        </GridPane>
+    </children>
+</fx:root>

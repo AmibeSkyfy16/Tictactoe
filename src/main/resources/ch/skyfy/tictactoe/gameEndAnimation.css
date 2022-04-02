@@ -1,0 +1,27 @@
+.button{
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+    -fx-min-width: 100;
+    -fx-min-height: 50;
+    -fx-text-fill: #F77F00;
+}
+
+.root{
+    -fx-background-color: #028090;
+}
+
+.button:hover{
+    -fx-background-color: #EAE2B7 !important;
+}
+.button:pressed{
+    -fx-background-color: #FCBF49 !important;
+}
+
+
+#leave{
+    -fx-background-color: #F0F3BD;
+}
+
+#retry{
+    -fx-background-color: #F0F3BD;
+}

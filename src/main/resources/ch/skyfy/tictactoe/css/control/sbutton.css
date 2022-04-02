@@ -1,0 +1,31 @@
+.sbutton{
+    -fx-background-color: #ffa624;
+    -fx-background-radius: 25;
+    /*-fx-border-radius: 25;*/
+    /*-fx-padding: 0;*/
+}
+
+.sbutton:hover{
+    -fx-cursor: hand;
+}
+
+.sbutton:hover, .sbutton:focused{
+    -fx-border-color: #E92D43;
+    -fx-border-width: 5;
+    -fx-border-radius: 25;
+    -fx-border-insets: -1;
+}
+
+/*.sbutton:selected{*/
+/*    -fx-border-color: #E92D43;*/
+/*    -fx-border-width: 5;*/
+/*    -fx-border-radius: 25;*/
+/*    -fx-border-insets: -1;*/
+/*}*/
+
+.sbutton:pressed{
+    -fx-background-color: #E92D43;
+/*    -fx-background-insets: -5;*/
+    -fx-border-insets: -1;
+    -fx-border-width: 5;
+}
